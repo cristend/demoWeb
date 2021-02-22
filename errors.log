@@ -1,0 +1,153 @@
+21:02:21 09:06:07
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '@b.c && pass=123123' at line 1 in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(96): Model->read('user', '*', 'email=a@b.c && ...', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_one('user', '*', 'email=a@b.c && ...', Array, Array, 'ASC', '', '')
+#4 {main}
+21:02:21 09:33:02
+mysqli_sql_exception: Unknown column 'emails' in 'where clause' in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(96): Model->read('user', '*', 'emails=? && pas...', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_one('user', '*', 'emails=? && pas...', Array, Array, 'ASC', '', '')
+#4 {main}
+21:02:21 09:37:12
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM user WHERE email=? || detail=? in /var/www/flechazo.com/html/model/db.php:147
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(147): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(96): Model->read('user', '*', 'email=? || deta...', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_one('user', '*', 'email=? || deta...', Array, Array, 'ASC', '', '')
+#4 {main}
+21:02:21 09:37:37
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM user WHERE email=? || detail=? in /var/www/flechazo.com/html/model/db.php:147
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(147): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'ASC', '', '')
+#4 {main}
+21:02:21 09:38:05
+mysqli_sql_exception: Unknown column 'idDESC' in 'order clause' in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#4 {main}
+21:02:21 09:39:47
+mysqli_sql_exception: Unknown column 'idDESC' in 'order clause' in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#4 {main}
+21:02:21 09:40:24
+mysqli_sql_exception: Unknown column 'idDESC' in 'order clause' in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#4 {main}
+SELECT * FROM user WHERE email=? || detail=? ORDER BY idDESC
+21:02:21 09:40:58
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'DESC' at line 1 in /var/www/flechazo.com/html/model/db.php:129
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(129): mysqli->prepare('SELECT * FROM u...')
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '', '')
+#4 {main}
+SELECT * FROM user WHERE email=? || detail=? ORDER BY id, DESC
+21:02:21 09:41:50
+mysqli_sql_exception: No data supplied for parameters in prepared statement in /var/www/flechazo.com/html/model/db.php:147
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(147): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '2', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '2', '')
+#4 {main}
+SELECT * FROM user WHERE email=? || detail=? ORDER BY id DESC LIMIT 2
+21:02:21 09:41:52
+mysqli_sql_exception: No data supplied for parameters in prepared statement in /var/www/flechazo.com/html/model/db.php:147
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(147): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/db.php(80): Model->bind_execute('SELECT * FROM u...', Array)
+#2 /var/www/flechazo.com/html/model/db.php(112): Model->read('user', '*', 'email=? || deta...', Array, Array, 'DESC', '2', '')
+#3 /var/www/flechazo.com/html/index.php(263): Model->read_all('user', '*', 'email=? || deta...', Array, Array, 'DESC', '2', '')
+#4 {main}
+SELECT * FROM user WHERE email=? || detail=? ORDER BY id DESC LIMIT 2
+21:02:22 01:43:26
+execute error 
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR() NOT NULL,
+    email VA' at line 2 in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('CREATE TABLE us...')
+#1 /var/www/flechazo.com/html/admin.php(6): Model->execute('CREATE TABLE us...')
+#2 {main}
+21:02:22 01:56:34
+execute error 
+mysqli_sql_exception: Table 'users' already exists in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('CREATE TABLE us...')
+#1 /var/www/flechazo.com/html/admin.php(6): Model->execute('CREATE TABLE us...')
+#2 {main}
+21:02:22 01:56:54
+execute error 
+mysqli_sql_exception: Table 'users' already exists in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('CREATE TABLE us...')
+#1 /var/www/flechazo.com/html/admin.php(6): Model->execute('CREATE TABLE us...')
+#2 {main}
+21:02:22 02:23:25
+execute error 
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE users(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    emai' at line 1 in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('SELECT 1 FROM C...')
+#1 /var/www/flechazo.com/html/admin.php(7): Model->execute('SELECT 1 FROM C...')
+#2 {main}
+21:02:22 02:23:25
+execute error 
+mysqli_sql_exception: Table 'users' already exists in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('CREATE TABLE us...')
+#1 /var/www/flechazo.com/html/admin.php(9): Model->execute('CREATE TABLE us...')
+#2 {main}
+21:02:22 02:23:25
+execute error 
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CREATE TABLE user_profile(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+ ' at line 1 in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('SELECT 1 FROM C...')
+#1 /var/www/flechazo.com/html/admin.php(7): Model->execute('SELECT 1 FROM C...')
+#2 {main}
+21:02:22 02:23:25
+execute error 
+mysqli_sql_exception: Table 'user_profile' already exists in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('CREATE TABLE us...')
+#1 /var/www/flechazo.com/html/admin.php(9): Model->execute('CREATE TABLE us...')
+#2 {main}
+21:02:22 02:33:56
+execute error 
+mysqli_sql_exception: Table 'flechazo.users' doesn't exist in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('SELECT 1 FROM u...')
+#1 /var/www/flechazo.com/html/admin.php(7): Model->execute('SELECT 1 FROM u...')
+#2 {main}
+21:02:22 02:33:56
+execute error 
+mysqli_sql_exception: Table 'flechazo.user_profile' doesn't exist in /var/www/flechazo.com/html/model/db.php:195
+Stack trace:
+#0 /var/www/flechazo.com/html/model/db.php(195): mysqli->query('SELECT 1 FROM u...')
+#1 /var/www/flechazo.com/html/admin.php(7): Model->execute('SELECT 1 FROM u...')
+#2 {main}
