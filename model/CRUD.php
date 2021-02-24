@@ -1,13 +1,21 @@
 <?php
+include "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
 class CRUD
 {
-    private $connection;
+    protected $connection;
     public function __construct($db)
     {
         $this->connection = $db;
     }
+    public function get_connection()
+    {
+        return $this->connection;
+    }
     public function create(string $table, array $data = array())
     {
+        // check duplicate
+
+        // 
         $params = [];
         $query = "";
         $create_query = "INSERT INTO " . $table . " (";
@@ -194,6 +202,23 @@ class CRUD
             return $result;
         }
         return $result;
+    }
+
+    public function get_first_or_fail(string $table, string $condition, array $params)
+    {
+        $query = "SELECT * FROM " . $table . " WHERE " . $condition;
+        $stmt = $this->bind_execute($query, $params);
+        if ($stmt) {
+            $result = $stmt->get_result();
+            if ($result) {
+                $data = $result->fetch_row();
+                if ($data) {
+                    return $data;
+                } else {
+                    return false;
+                }
+            }
+        }
     }
 
     public function commit()

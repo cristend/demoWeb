@@ -1,4 +1,6 @@
 <?php
-include ('db.php');
+include_once "$_SERVER[DOCUMENT_ROOT]/model/db.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/CRUD.php";
 
-$db = new Model();
+$model = new Model();
+$conn = $model->get_conn();

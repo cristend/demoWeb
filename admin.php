@@ -1,12 +1,14 @@
 <?php
-include ('model/table/tables.php');
-include ('model/construct.php');
+include('model/table/tables.php');
+include('model/construct.php');
+include_once('model/CRUD.php');
 
-foreach ($table_list as $table_name=>$table) {
+$crud = new CRUD($conn);
+foreach ($table_list as $table_name => $table) {
     $query = "SELECT 1 FROM " . $table_name . " LIMIT 1";
-    $table_exist = $db->execute($query);
-    if (!$table_exist){
-        $db->execute($table);
-        $db->commit();
+    $table_exist = $crud->execute($query);
+    if (!$table_exist) {
+        $crud->execute($table);
+        $crud->commit();
     }
 }
