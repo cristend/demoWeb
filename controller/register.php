@@ -1,6 +1,6 @@
 <?php
 // include "$_SERVER[DOCUMENT_ROOT]/model/table/user_profile.php";
-include "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
 
 

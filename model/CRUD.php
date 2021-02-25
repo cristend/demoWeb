@@ -11,7 +11,7 @@ class CRUD
     {
         return $this->connection;
     }
-    public function create(string $table, array $data = array())
+    private function create(string $table, array $data = array())
     {
         // check duplicate
 
@@ -119,7 +119,12 @@ class CRUD
         }
         return null;
     }
-
+    public function get_all($table)
+    {
+        $query = "SELECT * FROM " . "$table";
+        $data = $this->execute($query);
+        return $data;
+    }
     public function update(string $table, array $data = [], string $condition = "", array $con_params = [])
     {
         $set_params = [];
@@ -220,8 +225,30 @@ class CRUD
             }
         }
     }
+    public function fetch_object($class_instant, $object)
+    {
+        $data = [];
+        $count = 0;
+        foreach (get_object_vars($class_instant) as $col => $value) {
+            if ($col == "table" || $col == "connection") {
+                continue;
+            }
+            $data[$col] = $object[$count];
+            $count = $count + 1;
+        }
+        return $data;
+    }
+    public function fetch_objects($class_instant, $array)
+    {
+        $objects = [];
+        foreach ($array as $object) {
+            $data = $this->fetch_object($class_instant, $object);
+            array_push($objects, $data);
+        }
+        return $objects;
+    }
 
-    public function commit()
+    private function commit()
     {
         $this->connection->commit();
     }

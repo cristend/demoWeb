@@ -91,27 +91,17 @@ class Users extends CRUD
     {
         # code...
     }
-    public function get_all()
+    public function get_users()
     {
         # code...
     }
     public function get_one($condition, $params)
     {
         $user = $this->get_first_or_fail($this->table, $condition, $params);
-        $user = $this->fetch_object($user);
-        return $user;
-    }
-    public function fetch_object($object)
-    {
-        $data = [];
-        $count = 0;
-        foreach (get_object_vars($this) as $col => $value) {
-            if ($col == "table" || $col == "connection") {
-                continue;
-            }
-            $data[$col] = $object[$count];
-            $count = $count + 1;
+        $user = $this->fetch_object($this, $user);
+        if ($user) {
+            return return_success($user);
         }
-        return $data;
+        return return_fail();
     }
 }

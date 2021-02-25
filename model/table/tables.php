@@ -12,7 +12,16 @@ $users = "CREATE TABLE users(
     image VARCHAR(200), 
     address VARCHAR(200)
 )";
-
+$products = "CREATE TABLE products(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    title VARCHAR(200) NOT NULL,
+    price VARCHAR(10) NOT NULL,
+    variable VARCHAR(256) NOT NULL,
+    quantity INT(10) UNSIGNED DEFAULT 0,
+    detail TEXT,
+    image VARCHAR(256)
+)";
 $table_list = [
     "users" => $users,
+    "products" => $products
 ];

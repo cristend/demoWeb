@@ -21,7 +21,8 @@ function return_success($data = "", $error = "", $type = "", $msg = "success")
     ];
     return $return_value;
 }
-function return_fail($data = "", $error = "", $type = "", $msg = "fail"){
+function return_fail($data = "", $error = "", $type = "", $msg = "fail")
+{
     $return_value = [
         "data" => $data,
         "error" => $error,
@@ -46,4 +47,18 @@ function logError($error)
     $date = $date->format("y:m:d h:i:s");
     $error = $date . "\n" . $error . "\n";
     return error_log($error, 3, "errors.log");
+}
+function strfy($array)
+{
+    return implode(', ', array_map(
+        function ($v, $k) {
+            if (is_array($v)) {
+                return $k . '[]=' . implode('&' . $k . '[]=', $v);
+            } else {
+                return $k . '=' . $v;
+            }
+        },
+        $array,
+        array_keys($array)
+    ));
 }

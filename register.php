@@ -120,9 +120,4 @@
             </div>
         </div>
     </div>
-    <script>
-        // $('#re-password').on('change', function() {
-        //     alert('etc');
-        // });
-    </script>
 </body>
