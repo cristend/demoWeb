@@ -7,7 +7,37 @@ body {
     height: 40px;
 }
 
-.product{
+.product {
     height: 500px;
     overflow: hidden;
+}
+
+#user-icon img {
+    /* background-color: white; */
+    margin-top: 10px;
+    height: 20px;
+}
+
+#cart-icon img {
+    height: 25px;
+}
+
+#cart-icon {
+    position: relative;
+}
+
+#cart-icon #cart-item {
+    position: absolute;
+    top: 10px;
+    left: 25px;
+    color: red;
+    font-size: 10px;
+    display: block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid red;
+    border-radius: 50%;
+    text-align: center;
+    padding-bottom: 15px;
+    display: none;
 }

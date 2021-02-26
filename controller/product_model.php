@@ -30,3 +30,21 @@ function get_products(Products $model)
     }
     return "";
 }
+
+function paging(Products $model, $page = 1)
+{
+    $limit = 9;
+    $offset = $limit * ($page - 1);
+    $pages_status = $model->get_page($limit, $offset);
+    if (($pages_status)['msg'] == 'success') {
+        return $pages_status['data'];
+    }
+    return "";
+}
+
+function get_page(Products $model)
+{
+    $count = $model->count_products();
+    $pages = ceil($count / 9);
+    return $pages;
+}

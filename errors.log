@@ -234,3 +234,1408 @@ Stack trace:
 #5 /var/www/flechazo.com/html/index.php(53): get_products(Object(Products))
 #6 {main}
 SELECT * FROM products
+21:02:25 08:42:05
+execute error 
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products in /var/www/flechazo.com/html/model/CRUD.php:220
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(220): mysqli->query('SELECT * FROM p...')
+#1 /var/www/flechazo.com/html/model/CRUD.php(146): CRUD->execute('SELECT * FROM p...')
+#2 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->count('products')
+#3 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#4 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#5 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#6 {main}
+21:02:25 08:42:18
+execute error 
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products in /var/www/flechazo.com/html/model/CRUD.php:220
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(220): mysqli->query('SELECT * FROM p...')
+#1 /var/www/flechazo.com/html/model/CRUD.php(146): CRUD->execute('SELECT * FROM p...')
+#2 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->count('products')
+#3 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#4 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#5 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#6 {main}
+21:02:25 08:45:17
+execute error 
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products in /var/www/flechazo.com/html/model/CRUD.php:220
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(220): mysqli->query('SELECT * FROM p...')
+#1 /var/www/flechazo.com/html/model/CRUD.php(146): CRUD->execute('SELECT * FROM p...')
+#2 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->count('products')
+#3 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#4 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#5 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#6 {main}
+21:02:25 08:46:42
+execute error 
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products WHERE 1 in /var/www/flechazo.com/html/model/CRUD.php:220
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(220): mysqli->query('SELECT * FROM p...')
+#1 /var/www/flechazo.com/html/model/CRUD.php(146): CRUD->execute('SELECT * FROM p...')
+#2 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->count('products')
+#3 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#4 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#5 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#6 {main}
+21:02:25 08:50:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products WHERE 1 in /var/www/flechazo.com/html/model/CRUD.php:206
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(206): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(146): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->count('products')
+#3 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#4 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#5 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#6 {main}
+SELECT * FROM products WHERE 1
+21:02:25 08:54:23
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:205
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(205): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(137): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#6 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 08:54:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:205
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(205): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '9')
+#3 /var/www/flechazo.com/html/model/CRUD.php(137): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '9')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 9)
+#5 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#6 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 08:54:58
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:205
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(205): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(137): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(36): Products->get_page(9)
+#6 /var/www/flechazo.com/html/index.php(53): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:16:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:18:25
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:18:51
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:19:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:20:34
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:20:58
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:22:39
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:23:52
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:25:47
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products))
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:26:10
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:26:13
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '9')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '9')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 9)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 9)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '2')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:26:18
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '1')
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:26:21
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '9')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '9')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 9)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 9)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '2')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:26:24
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 18)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '3')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:26:45
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 18)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '3')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:26:48
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 18)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '3')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:27:11
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 18)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '3')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:25 09:27:16
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '1')
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:25 09:27:18
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  OFFSET ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '18')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '18')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 18)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 18)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), '3')
+#7 {main}
+SELECT * FROM products LIMIT ?  OFFSET ? 
+21:02:26 08:57:09
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:00:50
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:02:28
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:03:40
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:04:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:06:50
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:08:51
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:09:14
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:09:20
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(57): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:21:30
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:22:59
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:25:13
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:25:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:26:16
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:26:39
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:27:12
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:27:37
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:27:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(63): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:33:44
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(69): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:34:47
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(69): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:36:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(77): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:39:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(77): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:40:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(77): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:46:54
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(83): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:46:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(83): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:47:12
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(83): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:49:31
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(86): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:49:32
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(86): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:49:51
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(86): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:50:00
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(86): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:50:06
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(86): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:56:20
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(88): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:56:35
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(88): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 09:56:50
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(88): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:05:02
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:05:03
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:06:23
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:06:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:07:02
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:07:16
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:08:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:33:04
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:33:12
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:33:13
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:34:53
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:45:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:46:22
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:46:23
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:46:27
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:46:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:49:14
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:50:01
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:50:16
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 10:50:21
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 11:16:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 11:20:34
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 11:20:46
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 11:59:01
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 11:59:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 12:30:00
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 12:30:09
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(92): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:14:36
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:15:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:19:54
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:22:36
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:22:39
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:22:44
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:22:59
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:23:53
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:23:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:25:30
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:25:32
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:25:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:25:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:26:31
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:26:51
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:27:14
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:27:18
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:28:52
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:29:01
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:30:46
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:30:47
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:33:21
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:36:22
+execute error 
+mysqli_sql_exception: Table 'flechazo.carts' doesn't exist in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('SELECT 1 FROM c...')
+#1 /var/www/flechazo.com/html/admin.php(9): CRUD->execute('SELECT 1 FROM c...')
+#2 {main}
+21:02:26 01:36:22
+execute error 
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 5 in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('CREATE TABLE ca...')
+#1 /var/www/flechazo.com/html/admin.php(11): CRUD->execute('CREATE TABLE ca...')
+#2 {main}
+21:02:26 01:37:13
+execute error 
+mysqli_sql_exception: Table 'flechazo.carts' doesn't exist in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('SELECT 1 FROM c...')
+#1 /var/www/flechazo.com/html/admin.php(9): CRUD->execute('SELECT 1 FROM c...')
+#2 {main}
+21:02:26 01:37:13
+execute error 
+mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 5 in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('CREATE TABLE ca...')
+#1 /var/www/flechazo.com/html/admin.php(11): CRUD->execute('CREATE TABLE ca...')
+#2 {main}
+21:02:26 01:38:43
+execute error 
+mysqli_sql_exception: Table 'flechazo.carts' doesn't exist in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('SELECT 1 FROM c...')
+#1 /var/www/flechazo.com/html/admin.php(9): CRUD->execute('SELECT 1 FROM c...')
+#2 {main}
+21:02:26 01:39:20
+execute error 
+mysqli_sql_exception: Table 'flechazo.carts' doesn't exist in /var/www/flechazo.com/html/model/CRUD.php:212
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(212): mysqli->query('SELECT 1 FROM c...')
+#1 /var/www/flechazo.com/html/admin.php(9): CRUD->execute('SELECT 1 FROM c...')
+#2 {main}
+21:02:26 01:42:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:42:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:44:37
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 
+21:02:26 01:44:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/CRUD.php:198
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(198): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/controller/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/index.php(108): paging(Object(Products), 1)
+#7 {main}
+SELECT * FROM products LIMIT ? 

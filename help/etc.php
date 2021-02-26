@@ -62,3 +62,12 @@ function strfy($array)
         array_keys($array)
     ));
 }
+function get_params_url(array $array)
+{
+    $url = "?";
+    foreach ($array as $key => $value) {
+        $url = $url . $key . "=" . $value . "&&";
+    }
+    $url = rtrim($url, "&&");
+    return $url;
+}

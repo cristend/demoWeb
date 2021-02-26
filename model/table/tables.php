@@ -21,7 +21,13 @@ $products = "CREATE TABLE products(
     detail TEXT,
     image VARCHAR(256)
 )";
+$carts = "CREATE TABLE carts(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    user_id INT(10) UNSIGNED NOT NULL UNIQUE,
+    product_id INT(10) UNSIGNED NOT NULL UNIQUE
+)";
 $table_list = [
     "users" => $users,
-    "products" => $products
+    "products" => $products,
+    "carts" => $carts
 ];

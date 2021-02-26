@@ -9,6 +9,5 @@ foreach ($table_list as $table_name => $table) {
     $table_exist = $crud->execute($query);
     if (!$table_exist) {
         $crud->execute($table);
-        $crud->commit();
     }
 }

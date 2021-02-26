@@ -1,5 +1,4 @@
 <?php
-// include "$_SERVER[DOCUMENT_ROOT]/model/table/user_profile.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
 
@@ -7,7 +6,6 @@ include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
 function register($conn, $user_data)
 {
     $user_model = new Users($conn);
-    // $user_profile_model = new UserProfile($conn);
     $errors = [];
     $create_user_status = $user_model->add($user_data);
     if ($create_user_status['msg'] == "success") {
@@ -19,10 +17,6 @@ function register($conn, $user_data)
 }
 
 if (isset($_POST)) {
-    // $user_data = [
-    //     "email" => $_POST["email"],
-    //     "pass" => $_POST["password"]
-    // ];
     $user_data = [
         "name" => $_POST["name"],
         "email" => $_POST["email"],

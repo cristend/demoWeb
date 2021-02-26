@@ -5,17 +5,17 @@ include_once "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
 class Users extends CRUD
 {
     private $table = "users";
-    private $id = "id";
-    private $name = "name";
-    private $email = "email";
-    private $pass = "pass";
-    private $permission = "permission";
-    private $bio = "bio";
-    private $sex = "sex";
-    private $phone = "phone";
-    private $birth = "birth";
-    private $image = "image";
-    private $address = "address";
+    protected $id = "id";
+    protected $name = "name";
+    protected $email = "email";
+    protected $pass = "pass";
+    protected $permission = "permission";
+    protected $bio = "bio";
+    protected $sex = "sex";
+    protected $phone = "phone";
+    protected $birth = "birth";
+    protected $image = "image";
+    protected $address = "address";
     protected $connection;
 
     public function __construct($db)
@@ -30,10 +30,11 @@ class Users extends CRUD
         $condition = $this->email . "=?";
         $params = [$email];
         $user = $this->get_one($condition, $params);
-        if ($user) {
+        if ($user['msg'] == 'success') {
+            $user = $user['data'];
             $pass = $user[$this->pass];
             if (password_verify($password, $pass)) {
-                return return_success();
+                return return_success($user);
             } else {
                 return return_fail();
             }
@@ -91,9 +92,18 @@ class Users extends CRUD
     {
         # code...
     }
-    public function get_users()
+    public function get_user($id)
     {
-        # code...
+        $condition = $this->id . "=?";
+        $params = [$id];
+        $user = $this->read_one($this->table, "*", $condition, $params);
+        if ($user) {
+            $user = $this->fetch_object($this, $user);
+            if ($user) {
+                return return_success($user);
+            }
+        }
+        return return_fail();
     }
     public function get_one($condition, $params)
     {

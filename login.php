@@ -1,3 +1,10 @@
+<?php
+session_start();
+if (isset($_SESSION['user'])) {
+    header("Location: /?route=login_success");
+}
+?>
+
 <head>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -22,10 +29,21 @@
                     email: "Please enter a valid email address"
                 },
                 submitHandler: function(form) {
+                    var url = window.location.href;
+                    var url_split = url.split("?");
+                    var params = "";
+                    if (url_split.length > 1) {
+                        params = '*' + url_split[1];
+                    }
+                    data = $('form').serialize();
+                    if (params){
+                        data = data + encodeURIComponent(params);
+                    }
+                    // console.log(url);
                     $.ajax({
                         type: 'post',
                         url: 'controller/login.php',
-                        data: $('form').serialize(),
+                        data: data,
                         dataType: 'json',
                         success: function(response) {
                             console.log(response.location);
@@ -43,6 +61,7 @@
                                 message.innerHTML = "Incorrect information";
                                 var alert = document.getElementsByClassName("alert-warning");
                                 $(alert).show();
+                                $(alert).hide(2000);
 
                             }
                         },

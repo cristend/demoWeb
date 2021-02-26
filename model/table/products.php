@@ -58,4 +58,17 @@ class Products extends CRUD
         }
         return return_fail();
     }
+    public function get_page($limit, $offset = 0)
+    {
+        $pages = $this->read_page($this->table, $limit, $offset);
+        if ($pages) {
+            $pages = $this->fetch_objects($this, $pages);
+            return return_success($pages);
+        }
+        return return_fail();
+    }
+    public function count_products()
+    {
+        return $this->count($this->table);
+    }
 }

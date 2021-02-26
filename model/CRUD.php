@@ -1,5 +1,5 @@
 <?php
-include "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
 class CRUD
 {
     protected $connection;
@@ -121,9 +121,22 @@ class CRUD
     }
     public function get_all($table)
     {
-        $query = "SELECT * FROM " . "$table";
+        $query = "SELECT * FROM " . "$table" . " WHERE 1";
         $data = $this->execute($query);
         return $data;
+    }
+    public function read_page(
+        string $table,
+        int $limit,
+        int $offset = 0
+    ) {
+        $result = $this->read_all($table, "*", "", [], [], "ASC", (string)$limit, (string)$offset);
+        return $result;
+    }
+    public function count($table)
+    {
+        $result = $this->read_one($table, "count(*)");
+        return $result[0];
     }
     public function update(string $table, array $data = [], string $condition = "", array $con_params = [])
     {
@@ -197,7 +210,7 @@ class CRUD
     {
         try {
             $result = $this->connection->query($query);
-        } catch (\Throwable $th) {
+        } catch (mysqli_sql_exception $th) {
             $this->connection->rollback();
             $error = "execute error \n" . $th;
             logError($error);

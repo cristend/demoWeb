@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
 
@@ -8,8 +9,8 @@ function login($conn, $user_data)
     $user_model = new Users($conn);
     $login_status = $user_model->login($user_data);
     if ($login_status['msg'] == "success") {
-        return true;
-    } 
+        return $login_status['data'];
+    }
     return false;
 }
 
@@ -18,6 +19,13 @@ if (isset($_POST)) {
         "email" => $_POST["email"],
         "pass" => $_POST["password"],
     ];
+    $url = $_POST["submit"];
+    $params = explode("*", $url);
+    if (count($params) > 1) {
+        $url = "?" . $params[1];
+    } else {
+        $url = "";
+    }
 
     $login_success = login($conn, $user_data);
 
@@ -27,9 +35,10 @@ if (isset($_POST)) {
             'location' => ""
         ]);
     } else {
+        $_SESSION['user'] = $login_success['id'];
         header('Content-Type: application/json');
         echo json_encode([
-            'location' => '/',
+            'location' => '/' . $url,
             'errors' => ""
         ]);
     }
