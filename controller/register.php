@@ -1,17 +1,18 @@
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/user_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/cart_model.php";
 
 
-function register($conn, $user_data)
+function register($conn, $user_data, $user_model, $cart_model)
 {
-    $user_model = new Users($conn);
     $errors = [];
-    $create_user_status = $user_model->add($user_data);
-    if ($create_user_status['msg'] == "success") {
+    $user_status = add_user($user_data, $user_model);
+    if ($user_status['msg'] == "success") {
+        $user_id = $user_status['data'];
+        $cart_id = add_cart($cart_model, $user_id);
         return true;
     } else {
-        array_push($errors, $create_user_status["error"]);
+        array_push($errors, $user_status["error"]);
     }
     return $errors;
 }
@@ -26,7 +27,7 @@ if (isset($_POST)) {
         "birth" => $_POST["birthday"]
     ];
 
-    $register_success = register($conn, $user_data);
+    $register_success = register($conn, $user_data, $user_model, $cart_model);
     if ($register_success === true) {
         header('Content-Type: application/json');
         echo json_encode([
@@ -36,10 +37,9 @@ if (isset($_POST)) {
     } else {
         if ($register_success) {
             echo json_encode([
-                'errors' => $register_errors,
+                'errors' => $register_success,
                 'location' => ""
             ]);
         }
     }
 }
-// header('Location: /');

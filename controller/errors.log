@@ -1,0 +1,119 @@
+21:02:26 05:28:10
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart.php(17): add_item(Object(CartItems), 1, '11', '1')
+#6 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:07:09
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:07:22
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:07:23
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:10:07
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:15:33
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:15:35
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:15:37
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(23): add_item(Object(CartItems), 1, '11', '1')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '11', '1')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:22:06
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(24): add_item(Object(CartItems), 1, '13', '5')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '13', '5')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)
+21:02:26 07:22:51
+mysqli_sql_exception: Duplicate entry '1' for key 'cart_id' in /var/www/flechazo.com/html/model/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/CRUD.php(31): CRUD->bind_execute('INSERT INTO car...', Array)
+#2 /var/www/flechazo.com/html/model/CRUD.php(37): CRUD->create('cart_items', Array)
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(25): CRUD->create_one('cart_items', Array)
+#4 /var/www/flechazo.com/html/controller/cart_item_model.php(14): CartItems->add(Array)
+#5 /var/www/flechazo.com/html/controller/cart_item_model.php(24): add_item(Object(CartItems), 1, '13', '5')
+#6 /var/www/flechazo.com/html/controller/cart.php(17): add_to_cart(Object(CartItems), 1, '13', '5')
+#7 {main}
+INSERT INTO cart_items (cart_id, product_id, quantity) VALUES (?, ?, ?)

@@ -45,10 +45,17 @@ include_once "$_SERVER[DOCUMENT_ROOT]/view/home_header.php";
                 data: $('form').serialize(),
                 dataType: 'json',
                 success: function(response) {
-                    console.log(response.location);
                     if (response.location) {
-                        console.log(response);
                         window.location.href = response.location;
+                    }
+                    if (response.data) {
+                        var cart_item = document.getElementById("cart-item");
+                        var cart_item_number = document.getElementById("item-number");
+                        cart_item_number.innerHTML = response.data;
+                        if (response.data) {
+                            $(cart_item).show();
+                        }
+                        alert('Add success!');
                     }
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
@@ -57,7 +64,6 @@ include_once "$_SERVER[DOCUMENT_ROOT]/view/home_header.php";
             });
             return false;
         })
-
     })
 </script>
 <?php
@@ -106,7 +112,7 @@ if (isset($_GET)) {
                                     <div class="btn-plus"><span class="glyphicon glyphicon-plus"></span></div>
                                 </div>
                             </div>
-                            <input name="url" value="<?php echo $_SERVER['REQUEST_URI'];?>" type="hidden"/>
+                            <input name="url" value="<?php echo $_SERVER['REQUEST_URI']; ?>" type="hidden" />
                         </div>
 
                         <!-- Botones de compra -->

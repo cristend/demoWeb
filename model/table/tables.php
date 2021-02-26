@@ -23,11 +23,17 @@ $products = "CREATE TABLE products(
 )";
 $carts = "CREATE TABLE carts(
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    user_id INT(10) UNSIGNED NOT NULL UNIQUE,
-    product_id INT(10) UNSIGNED NOT NULL UNIQUE
+    user_id INT(10) UNSIGNED UNIQUE NOT NULL
+)";
+$cart_items = "CREATE TABLE cart_items(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    cart_id INT(10) UNSIGNED NOT NULL,
+    product_id INT(10) UNSIGNED UNIQUE NOT NULL,
+    quantity INT(10) UNSIGNED
 )";
 $table_list = [
     "users" => $users,
     "products" => $products,
-    "carts" => $carts
+    "carts" => $carts,
+    "cart_items" => $cart_items
 ];

@@ -18,9 +18,9 @@ class Users extends CRUD
     protected $address = "address";
     protected $connection;
 
-    public function __construct($db)
+    public function __construct($conn)
     {
-        parent::__construct($db);
+        parent::__construct($conn);
     }
 
     public function login(array $array)
@@ -51,6 +51,7 @@ class Users extends CRUD
         $data[$this->pass] = password_hash($array['pass'], PASSWORD_DEFAULT);
         // $data[$this->phone] = $array['phone'];
         $data[$this->birth] = $array['birth'];
+        // $data[$this->cart] = $array['cart'];
         // $data[$this->image] = $array['image'];
         // $data[$this->address] = $array['address'];
         $data = clean_array($data);
@@ -64,18 +65,21 @@ class Users extends CRUD
         }
         // 
         $this->create_one($this->table, $data);
-        return return_success();
+        $last_id = $this->get_last_user_id();
+        if ($last_id) {
+            return return_success($last_id);
+        }
+        return return_fail();
     }
 
     public function edit($id, array $array)
     {
         $data = [];
-        $data[$this->id] = $array['id'];
-        $data[$this->user_id] = $array['user_id'];
         $data[$this->name] = $array['name'];
         $data[$this->bio] = $array['bio'];
         $data[$this->sex] = $array['sex'];
         $data[$this->phone] = $array['phone'];
+        $data[$this->pass] = $array['pass'];
         $data[$this->birth] = $array['birth'];
         $data[$this->address] = $array['address'];
         $data = clean_array($data);
@@ -84,6 +88,7 @@ class Users extends CRUD
         $params = [$id];
         $this->update($this->table, $data, $condition, $params);
     }
+
     public function edit_image()
     {
         # code...
@@ -113,5 +118,22 @@ class Users extends CRUD
             return return_success($user);
         }
         return return_fail();
+    }
+    public function get_last_user_id()
+    {
+        return $this->get_last_id($this->table);
+    }
+    public function construct_user()
+    {
+        return [
+            "name" => "",
+            "bio" => "",
+            "sex" => "",
+            "phone" => "",
+            "pass" => "",
+            "birth" => "",
+            "address" => "",
+            "cart_id" => ""
+        ];
     }
 }

@@ -138,6 +138,15 @@ class CRUD
         $result = $this->read_one($table, "count(*)");
         return $result[0];
     }
+    public function get_last_id($table)
+    {
+        $last_id = $this->read_one($table, "MAX(id)");
+        if ($last_id) {
+            return $last_id[0];
+        } else {
+            return false;
+        }
+    }
     public function update(string $table, array $data = [], string $condition = "", array $con_params = [])
     {
         $set_params = [];
@@ -246,7 +255,10 @@ class CRUD
             if ($col == "table" || $col == "connection") {
                 continue;
             }
-            $data[$col] = $object[$count];
+            if ($object[$count] === null) {
+                $object[$count] = "";
+            }
+            $data[$value] = $object[$count];
             $count = $count + 1;
         }
         return $data;

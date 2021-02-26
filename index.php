@@ -3,11 +3,13 @@ session_start();
 include_once "$_SERVER[DOCUMENT_ROOT]/view/home_header.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/view/home_navigation.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/controller/user_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/controller/cart_item_model.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
 $current_url = "";
 if (isset($_SESSION['user'])) {
     $id = $_SESSION['user'];
     $user = get_user($id, $user_model);
+    $count = get_number_item($cart_item_model);
     if ($user) {
         echo '<li class="nav-item"><a id="user-icon" href="#"><img src="/static/images/profile.svg"/></li>
           <li class="nav-item">
@@ -18,9 +20,13 @@ if (isset($_SESSION['user'])) {
           </li>
           <li class="nav-item">
             <a id="cart-icon" class="nav-link" href="">
-                <img src="/static/images/shopping-cart.png"/>
-                <div id="cart-item"><span></span></div>
-            </a>
+                <img src="/static/images/shopping-cart.png"/>';
+        if ($count) {
+            echo '<div id="cart-item" style="display:initial !important"><span id="item-number">' . $count . '</span></div>';
+        } else {
+            echo '<div id="cart-item"><span id="item-number"></span></div>';
+        }
+        echo '</a>
           </li>
         </ul>
     </div>

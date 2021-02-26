@@ -3,7 +3,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <a id="flechazo-logo" class="navbar-brand" href="/?page=index.php"><img src="/static/images/logo.png"
+            <a id="flechazo-logo" class="navbar-brand" href="/"><img src="/static/images/logo.png"
                     alt="Flechazo Shop"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
                 aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
