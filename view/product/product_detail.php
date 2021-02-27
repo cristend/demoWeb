@@ -1,9 +1,6 @@
-<?php
-include_once "$_SERVER[DOCUMENT_ROOT]/view/home_header.php";
-?>
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
-<link rel="stylesheet" , href="../static/css/product.css">
+<link rel="stylesheet" , href="/static/css/product.css">
 <script>
     $(function() {
         $("ul.menu-items > li").on("click", function() {
@@ -67,8 +64,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/view/home_header.php";
     })
 </script>
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/view/home_navigation.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/controller/product_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
 if (isset($_GET)) {
     $id = $_GET['id'];
     $product_detail = get_product($id, $product_model);
@@ -143,6 +139,3 @@ if (isset($_GET)) {
     }
 }
 ?>
-<!-- <?php
-        include_once "$_SERVER[DOCUMENT_ROOT]/view/home_footer.html";
-        ?> -->

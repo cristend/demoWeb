@@ -1,6 +1,6 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/model/table/users.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/base/construct.php";
 
 $user_model = new Users($conn);
 

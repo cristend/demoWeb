@@ -1,6 +1,6 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/model/table/carts.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/construct.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/base/construct.php";
 
 $cart_model = new Carts($conn);
 

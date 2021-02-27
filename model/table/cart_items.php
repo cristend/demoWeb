@@ -1,5 +1,5 @@
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/model/CRUD.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/base/CRUD.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/help/etc.php";
 class CartItems extends CRUD
 {

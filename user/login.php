@@ -39,10 +39,9 @@ if (isset($_SESSION['user'])) {
                     if (params){
                         data = data + encodeURIComponent(params);
                     }
-                    // console.log(url);
                     $.ajax({
                         type: 'post',
-                        url: 'controller/login.php',
+                        url: '/controller/login.php',
                         data: data,
                         dataType: 'json',
                         success: function(response) {

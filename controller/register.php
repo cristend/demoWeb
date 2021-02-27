@@ -1,6 +1,6 @@
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/controller/user_model.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/controller/cart_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/user_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_model.php";
 
 
 function register($conn, $user_data, $user_model, $cart_model)

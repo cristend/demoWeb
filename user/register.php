@@ -3,7 +3,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
-    <link rel="stylesheet" href="static/css/register.css">
+    <link rel="stylesheet" href="/static/css/register.css">
     <script>
         $(function() {
             // 
@@ -27,7 +27,7 @@
                 submitHandler: function(form) {
                     $.ajax({
                         type: 'post',
-                        url: 'controller/register.php',
+                        url: '/controller/register.php',
                         data: $('form').serialize(),
                         dataType: 'json',
                         success: function(response) {

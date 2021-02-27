@@ -1,6 +1,6 @@
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/controller/cart_model.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/controller/cart_item_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_item_model.php";
 session_start();
 if (!isset($_SESSION['user'])) {
     $url = ltrim($_POST['url'], "/");
