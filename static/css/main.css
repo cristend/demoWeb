@@ -41,3 +41,9 @@ body {
     padding-bottom: 15px;
     display: none;
 }
+.btn-success-short {
+    width: auto !important;
+}
+.footer {
+    margin-top: 15vh;
+}

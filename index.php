@@ -26,17 +26,9 @@ if (isset($_SESSION['user'])) {
         } else {
             echo '<div id="cart-item"><span id="item-number"></span></div>';
         }
-        echo '</a>
-          </li>
-        </ul>
-    </div>
-</div>
-</nav>';
+        echo '</a></li></ul></div></div></nav>';
     } else {
-        echo '</ul>
-        </div>
-    </div>
-    </nav>';
+        echo '</ul></div></div></nav>';
     }
 } else {
     if ($_GET) {
@@ -45,11 +37,7 @@ if (isset($_SESSION['user'])) {
     echo '<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>
           <li class="nav-item">
             <a class="nav-link" href="login.php' . $current_url . '">Login</a>
-          </li>
-        </ul>
-    </div>
-</div>
-</nav>';
+          </li></ul></div></div></nav>';
 }
 if (isset($_GET['route'])) {
     $route = $_GET['route'];
@@ -57,6 +45,9 @@ if (isset($_GET['route'])) {
         include "$_SERVER[DOCUMENT_ROOT]/product/product.php";
     }
     $current_url = get_params_url($_GET);
+    if ($route == 'cart') {
+        include "$_SERVER[DOCUMENT_ROOT]/cart.php";
+    }
 } else {
     include_once "$_SERVER[DOCUMENT_ROOT]/controller/product_model.php";
 ?>

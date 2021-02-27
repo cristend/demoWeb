@@ -95,17 +95,17 @@ if (isset($_GET)) {
                             if (is_array($variables)) {
                                 foreach ($variables as $variant => $values) {
                                     echo '
-                                    <label for="' . $variant . '"></label>
+                                    <label for="' . $variant . '">' . $variant . '
                                     <select required name="' . $variant . '" id="' . $variant . '">';
                                     foreach ($values as $value) {
                                         echo '<option value="' . $value . '">' . $value . '</option>';
                                     }
-                                    echo '</select>';
+                                    echo '</select></label>';
                                 }
                             }
                             ?>
                             <div class="section" style="padding-bottom:20px;">
-                                <h6 class="title-attr"><small>Quantity</small></h6>
+                                <h6 class="title-attr">Quantity</h6>
                                 <div>
                                     <div class="btn-minus"><span class="glyphicon glyphicon-minus"></span></div>
                                     <input name="quantity" value="1" />
@@ -117,7 +117,8 @@ if (isset($_GET)) {
 
                         <!-- Botones de compra -->
                         <div class="section" style="padding-bottom:20px;">
-                            <input name="submit" type="submit" value="Add to cart" class="btn btn-success"><span style="margin-right:20px" class="glyphicon" aria-hidden="true"></span></>
+                            <input name="submit" type="submit" value="Add to cart" class="btn btn-success btn-success-short" />
+                            <input name="submit" type="submit" value="Purchase" class="btn btn-warning" />
                             <!-- </form> -->
 
                         </div>
