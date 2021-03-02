@@ -114,7 +114,7 @@ if (isset($_GET)) {
                         <!-- Botones de compra -->
                         <div class="section" style="padding-bottom:20px;">
                             <input name="submit" type="submit" value="Add to cart" class="btn btn-success btn-success-short" />
-                            <input name="submit" type="submit" value="Purchase" class="btn btn-warning" />
+                            <a href="/?route=cart"><input id="purchase" name="purchase" type="button" value="Purchase" class="btn btn-warning" /></a>
                             <!-- </form> -->
 
                         </div>

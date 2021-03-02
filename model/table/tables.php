@@ -8,7 +8,7 @@ $users = "CREATE TABLE users(
     bio VARCHAR(200),
     sex ENUM ('female','male','other') NOT NULL,
     phone VARCHAR(10),
-    birth DATETIME,
+    birth DATE,
     image VARCHAR(200), 
     address VARCHAR(200)
 )";

@@ -13,3 +13,12 @@ function add_order_item(OrderItems $model, $data)
     }
     return "";
 }
+
+function get_order_items_by_filter(OrderItems $model, array $filter)
+{
+    $order_items = $model->get_order_items_by_filter($filter);
+    if ($order_items['msg'] == 'success') {
+        return $order_items['data'];
+    }
+    return [];
+}

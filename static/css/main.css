@@ -89,6 +89,10 @@ body {
     padding: 30px 0 0!important
 }
 
+.profile-userpic {
+    text-align: center;
+}
+
 .profile-userpic img {
     float: none;
     margin: 0 auto;
@@ -141,7 +145,8 @@ body {
 
 .profile-usermenu {
     margin-top: 30px;
-    padding-bottom: 20px
+    padding-bottom: 20px;
+    border-top: 1px solid grey;
 }
 
 .profile-usermenu ul li {
@@ -477,9 +482,11 @@ body {
     margin-bottom: 0
 }
 
-.portlet.bordered {
-    border-left: 2px solid #e6e9ec!important
-}
+/* .portlet.bordered { */
+
+/* border-left: 2px solid #e6e9ec!important    */
+
+/* } */
 
 .portlet.bordered>.portlet-title {
     border-bottom: 0
@@ -545,7 +552,7 @@ body {
 }
 
 .portlet.light.bordered {
-    border: 1px solid #e7ecf1!important
+    border: 1px solid red!important
 }
 
 .portlet.light.bordered>.portlet-title {
@@ -1798,4 +1805,11 @@ body {
 
 .profile-nav {
     display: block;
+}
+
+.profile-nav li {
+    border-bottom: 1px solid darkblue !important;
+}
+.profile-detail{
+    border-bottom: 1px solid rgb(190, 190, 190);
 }

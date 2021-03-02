@@ -31,6 +31,20 @@ class Orders extends CRUD
         return return_fail();
     }
 
+    public function find_order($user_id)
+    {
+        $params = [$user_id];
+        $condition = $this->user_id . "=?";
+        $orders = $this->read_all($this->table, "*", $condition, $params);
+        if ($orders) {
+            $orders = $this->fetch_objects($this, $orders);
+            if ($orders) {
+                return return_success($orders);
+            }
+        }
+        return return_fail();
+    }
+
     public function get_order_by_id($id)
     {
         $condition = $this->id . "=?";

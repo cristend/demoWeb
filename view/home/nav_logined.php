@@ -36,9 +36,9 @@ if (isset($_SESSION['user'])) {
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <li class="nav-item"><a id="user-icon" href="/?route=profile"><img src="/static/images/profile.svg" /></li>
+                    <li class="nav-item"><a id="user-icon" href="/?route=user_profile"><img src="/static/images/profile.svg" /></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/?route=profile"><?php echo $user['name']; ?></a>
+                        <a class="nav-link" href="/?route=user_profile"><?php echo $user['name']; ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/controller/logout.php">Logout</a>

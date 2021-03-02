@@ -5,6 +5,7 @@ include_once "$_SERVER[DOCUMENT_ROOT]/help/sqlHelp.php";
 class OrderItems extends CRUD
 {
     private $table = "order_items";
+    protected $id = "id";
     protected $order_id = "order_id";
     protected $product_id = "product_id";
     protected $quantity = "quantity";
@@ -32,6 +33,25 @@ class OrderItems extends CRUD
         $last_id = $this->get_last_order_item_id();
         if ($last_id) {
             return return_success($last_id);
+        }
+        return return_fail();
+    }
+
+    public function get_order_items_by_filter(array $filter)
+    {
+        foreach ($filter as $key => $value) {
+            $properties = get_object_vars($this);
+            if (array_key_exists($key, $properties)) {
+                $condition = $properties[$key] . "=?";
+                $params = [$value];
+                $order_items = $this->read_all($this->table, "*", $condition, $params);
+                if ($order_items) {
+                    $order_items = $this->fetch_objects($this, $order_items);
+                    if ($order_items) {
+                        return return_success($order_items);
+                    }
+                }
+            }
         }
         return return_fail();
     }

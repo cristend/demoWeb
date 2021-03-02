@@ -39,3 +39,24 @@ function get_order_by_id(Orders $model, $order_id)
     }
     return "";
 }
+
+function find_orders(Orders $model, $user_id)
+{
+    $orders = $model->find_order($user_id);
+    if ($orders['msg'] == 'success') {
+        return $orders['data'];
+    }
+    return [];
+}
+
+function find_order_ids(Orders $model, $user_id)
+{
+    $order_ids = [];
+    $orders = find_orders($model, $user_id);
+    if ($orders) {
+        foreach ($orders as $order) {
+            array_push($order_ids, $order["id"]);
+        }
+    }
+    return $order_ids;
+}

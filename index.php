@@ -26,8 +26,15 @@ if (isset($_GET['route'])) {
         include_once "$_SERVER[DOCUMENT_ROOT]/view/cart/cart.php";
     } elseif ($route == 'checkout') {
         include_once "$_SERVER[DOCUMENT_ROOT]/view/checkout/checkout.php";
-    } elseif ($route == 'profile') {
-        include_once "$_SERVER[DOCUMENT_ROOT]/user/page.php";
+    } elseif ($route == 'user_profile') {
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/user.php";
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/profile.php";
+    } elseif ($route == 'user_history') {
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/user.php";
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/history.php";
+    } elseif ($route == 'user_edit'){
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/user.php";
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/user/edit_profile.php";
     }
 } else {
     // default main content
