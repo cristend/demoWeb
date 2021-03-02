@@ -1,5 +1,4 @@
 <?php
-session_start();
 if (isset($_GET) || !isset($_SESSION['user'])) {
     if ($_SERVER["DOCUMENT_URI"] != "/index.php") {
         header("Location: /404.php");
@@ -75,6 +74,7 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
             var elements = $(".product-cart td input[checked='checked']");
             sum_total(elements);
         });
+
         $(".check-all").click(function() {
             var checkedState = $(this).attr('checked');
             if (!checkedState) {
@@ -107,6 +107,7 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
             var elements = $(".product-cart td input[checked='checked']");
             sum_total(elements);
         });
+
         $(".input-qty").on("change", function() {
             var now = $(this).val();
             var ancestor = $(this)[0].parentNode.parentNode;
@@ -122,58 +123,101 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
             var elements = $(".product-cart td input[checked='checked']");
             sum_total(elements);
         });
-        $(".remove-product").on("click", function() {
-            var button = event.target;
-            var index = event.target.name;
-            var cart_id = $("#cart")[0].getAttribute("name");
-            var product_id = $(button).val();
-            var product = $("#product" + index);
-            var product_size = product.find(".product-size select option").val();
-            var product_color = product.find(".product-color select option").val();
 
+        $(".remove-product").on("click", function() {
+            if (confirm("Are you sure.")) {
+                var button = event.target;
+                var index = event.target.name;
+                var cart_item = $("#product" + index);
+                cart_item_id = cart_item[0].getAttribute("name");
+                $.ajax({
+                    type: "POST",
+                    url: "/controller/cart.php",
+                    data: {
+                        'cart_item_id': cart_item_id
+                    },
+                    success: function(response) {
+                        cart_item.remove();
+                        var elements = $(".product-cart td input[checked='checked']");
+                        sum_total(elements);
+                    },
+                    error: function(xhr, ajaxOptions, thrownError) {
+                        alert(thrownError);
+                    }
+                });
+            };
+        })
+        $(".update-cart").on("click", function() {
+            var data = update_cart();
             $.ajax({
                 type: "POST",
-                url: "/controller/cart.php",
+                url: "/controller/update_cart.php",
                 data: {
-                    'cart_id': cart_id,
-                    'product_id': product_id,
-                    'size': product_size,
-                    'color': product_color
+                    'data': data
                 },
                 success: function(response) {
-                    product.remove();
-                    var elements = $(".product-cart td input[checked='checked']");
-                    sum_total(elements);
+                    alert("update success!")
                 },
                 error: function(xhr, ajaxOptions, thrownError) {
                     alert(thrownError);
                 }
             });
-        })
-        $(".update-cart").on("click", function() {
-            update_cart();
         });
         $(".checkout").on("click", function() {
-            update_cart();
-            // var elements = $(".product-cart td input[checked='checked']");
-            // [].forEach.call(products, function(v, i, a) {
-            //     var array = [];
-            //     product_id = $(v).find(".remove-product")[0];
-            //     quantity = $(v).find(".item-quantity div input")[0];
-            //     color = $(v).find(".product-color select option")[0];
-            //     size = $(v).find(".product-size select option")[0];
-            //     if (product_id === undefined && quantity === undefined) {
+            // update cart
+            data = update_cart();
+            $.ajax({
+                type: "POST",
+                url: "/controller/update_cart.php",
+                data: {
+                    'data': data
+                },
+                success: function(response) {
 
-            //     } else {
-            //         array.quantity = $(quantity).val();
-            //         array.product_id = $(product_id).val();
-            //         array.size = $(size).val();
-            //         array.color = $(color).val();
-            //         data[i] = {
-            //             ...array
-            //         };
-            //     }
-            // });
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(thrownError);
+                }
+            });
+            // create order
+            var elements = $(".product-cart td input[checked='checked']");
+            if (elements.length == 0) {
+                alert("Please select at least product!");
+                return false;
+            }
+            var cart_items_id = [];
+            // console.log(elements);
+            [].forEach.call(elements, function(v, i, a) {
+                var index = v.name;
+                var cart_item = $("#product" + index);
+                if (cart_item.find(".total")[0] === undefined) {} else {
+                    var sub_total = cart_item.find(".total")[0].innerText;
+                    var cart_item_id = $(cart_item)[0].getAttribute("name");
+                    if (cart_item_id === undefined) {} else {
+                        cart_items_id.push({
+                            cart_item_id: cart_item_id,
+                            sub_total: sub_total
+                        });
+                    }
+                }
+            });
+            $.ajax({
+                type: "POST",
+                url: "/controller/checkout.php",
+                dataType: "json",
+                data: {
+                    'data': cart_items_id,
+                    'total': $("#total")[0].innerText,
+                },
+                success: function(response) {
+                    if (response.location) {
+                        window.location.href = response.location;
+                    }
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(thrownError);
+                }
+            });
         });
     });
 
@@ -181,39 +225,24 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
         var cart_id = $("#cart")[0].getAttribute("name");
         var products = $(".product-cart");
         var quantity = 0;
-        var color = "";
-        var size = "";
+        var cart_item_id = "";
         var data = [];
-        var product_id = 0;
+        console.log(products);
         [].forEach.call(products, function(v, i, a) {
             var array = [];
-            product_id = $(v).find(".remove-product")[0];
+            cart_item_id = v.getAttribute("name")
             quantity = $(v).find(".item-quantity div input")[0];
-            color = $(v).find(".product-color select option")[0];
-            size = $(v).find(".product-size select option")[0];
-            if (product_id === undefined && quantity === undefined) {
+            if (quantity === undefined) {
 
             } else {
                 array.quantity = $(quantity).val();
-                array.product_id = $(product_id).val();
-                array.size = $(size).val();
-                array.color = $(color).val();
+                array.cart_item_id = cart_item_id;
                 data[i] = {
                     ...array
                 };
             }
         });
-        $.ajax({
-            type: "POST",
-            url: "/controller/update_cart.php",
-            data: {
-                'cart_id': cart_id,
-                'data': data
-            },
-            success: function(response) {
-                alert("update success!")
-            }
-        });
+        return data;
     }
 
     function sum_total(elements) {
@@ -268,15 +297,15 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
                                 $product = get_product($product_id, $product_model);
                                 $price = (floatval($product['price'])) * $cart_item['quantity'];
                             ?>
-                                <tr id="product<?php echo $count; ?>" class="product-cart" name="<?php echo $product_id; ?>">
-                                    <td class="cart-checkbox"><input class="check-one" type="checkbox"></td>
+                                <tr id="product<?php echo $count; ?>" class="product-cart" name="<?php echo $cart_item["id"]; ?>">
+                                    <td class="cart-checkbox"><input class="check-one" type="checkbox" name="<?php echo $count; ?>"></td>
                                     <td class="hidden-xs">
                                         <a href="#">
                                             <img src="<?php echo $product['image']; ?>" alt="" title="" width="47" height="47">
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="#"><?php echo $product['title']; ?></a>
+                                        <a href="/?route=product_detail&&id=<?php echo $product_id; ?>"><?php echo $product['title']; ?></a>
                                     </td>
                                     <td class="product-color">
                                         <select name="color">
@@ -305,7 +334,7 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
                                     <td class="total"><?php echo $price; ?></td>
                                     <td class="text-center">
                                         <form name="remove-product" action="" method="get">
-                                            <button name="<?php echo $count; ?>" class="remove-product" type="button" value="<?php echo $product_id; ?>" class="close" aria-label="Close">
+                                            <button name="<?php echo $count; ?>" class="remove-product" type="button" value="<?php echo $cart_item["id"]; ?>" class="close" aria-label="Close">
                                                 X
                                             </button>
                                         </form>
@@ -331,7 +360,7 @@ $cart_items = get_cart_items($cart_item_model, $cart_id);
                 <div class="btn-group btns-cart">
                     <a href="/"><button type="button" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i>Continue Shopping</button></a>
                     <button type="button" class="btn btn-primary update-cart">Update Cart</button>
-                    <a href="/?route=checkout"><button type="button" class="btn btn-primary checkout">Checkout <i class="fa fa-arrow-circle-right"></i></button></a>
+                    <button type="button" class="btn btn-primary checkout">Checkout <i class="fa fa-arrow-circle-right"></i></button>
                 </div>
 
             </div>

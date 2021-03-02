@@ -4625,3 +4625,654 @@ Stack trace:
 #6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
 #7 {main}
 SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:44:39
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:44:39
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(17): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:44:52
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:44:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(17): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:45:04
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:45:18
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:45:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:46:14
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:46:14
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:47:28
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:47:28
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:56:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:56:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:56:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:56:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:58:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:58:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 12:59:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 12:59:55
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:00:08
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:00:08
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:03:18
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(87): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:03:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:07:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:07:19
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:07:46
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:07:46
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:07:48
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:07:48
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:08:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:08:38
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:08:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:08:41
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/base/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/model/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/view/product/product.php(55): paging(Object(Products), 1)
+#7 /var/www/flechazo.com/html/index.php(34): include_once('/var/www/flecha...')
+#8 {main}
+SELECT * FROM products LIMIT ? 
+21:03:02 01:08:44
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:08:53
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:08:53
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/base/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/model/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/view/product/product.php(55): paging(Object(Products), 1)
+#7 /var/www/flechazo.com/html/index.php(34): include_once('/var/www/flecha...')
+#8 {main}
+SELECT * FROM products LIMIT ? 
+21:03:02 01:08:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:09:03
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:09:03
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:09:54
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:09:54
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:09:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:09:56
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM products LIMIT ?  in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM p...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('products', '*', '', Array, Array, 'ASC', '9', '0')
+#3 /var/www/flechazo.com/html/model/base/CRUD.php(133): CRUD->read_all('products', '*', '', Array, Array, 'ASC', '9', '0')
+#4 /var/www/flechazo.com/html/model/table/products.php(63): CRUD->read_page('products', 9, 0)
+#5 /var/www/flechazo.com/html/model/product_model.php(38): Products->get_page(9, 0)
+#6 /var/www/flechazo.com/html/view/product/product.php(55): paging(Object(Products), 1)
+#7 /var/www/flechazo.com/html/index.php(34): include_once('/var/www/flecha...')
+#8 {main}
+SELECT * FROM products LIMIT ? 
+21:03:02 01:09:57
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:27
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:27
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:10:30
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:33
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:33
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:10:35
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:43
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?
+21:03:02 01:10:49
+mysqli_sql_exception: No index used in query/prepared statement SELECT count(*) FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT count(*)...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(99): CRUD->read('cart_items', 'count(*)', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(81): CRUD->read_one('cart_items', 'count(*)', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(42): CartItems->count_item(1)
+#5 /var/www/flechazo.com/html/view/home/nav_logined.php(12): get_number_item(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(17): include_once('/var/www/flecha...')
+#7 {main}
+SELECT count(*) FROM cart_items WHERE cart_id=?
+21:03:02 01:10:49
+mysqli_sql_exception: No index used in query/prepared statement SELECT * FROM cart_items WHERE cart_id=? in /var/www/flechazo.com/html/model/base/CRUD.php:207
+Stack trace:
+#0 /var/www/flechazo.com/html/model/base/CRUD.php(207): mysqli_stmt->execute()
+#1 /var/www/flechazo.com/html/model/base/CRUD.php(82): CRUD->bind_execute('SELECT * FROM c...', Array)
+#2 /var/www/flechazo.com/html/model/base/CRUD.php(116): CRUD->read('cart_items', '*', 'cart_id=?', Array, Array, 'ASC', '', '')
+#3 /var/www/flechazo.com/html/model/table/cart_items.php(59): CRUD->read_all('cart_items', '*', 'cart_id=?', Array)
+#4 /var/www/flechazo.com/html/model/cart_item_model.php(48): CartItems->get_cart_items(1)
+#5 /var/www/flechazo.com/html/view/cart/cart.php(16): get_cart_items(Object(CartItems), 1)
+#6 /var/www/flechazo.com/html/index.php(26): include_once('/var/www/flecha...')
+#7 {main}
+SELECT * FROM cart_items WHERE cart_id=?

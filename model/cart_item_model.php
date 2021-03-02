@@ -32,9 +32,9 @@ function add_to_cart(CartItems $model, $cart_id, $product_id, $data)
     }
 }
 
-function update_quantity(CartItems $model, $data, $product_id)
+function update_quantity(CartItems $model, $data, $cart_item_id)
 {
-    $model->edit_quantity($data, $product_id);
+    $model->edit_quantity($data, $cart_item_id);
 }
 
 function get_number_item(CartItems $model, $cart_id)
@@ -51,8 +51,33 @@ function get_cart_items(CartItems $model, $cart_id)
     }
     return [];
 }
-
-function remove(CartItems $model, array $array)
+function get_cart_item(CartItems $model, $cart_item_id)
 {
-    $model->remove($array);
+    $cart_item = $model->get_cart_item($cart_item_id);
+    if ($cart_item['msg'] == 'success') {
+        return $cart_item['data'];
+    }
+    return [];
+}
+function get_cart_by_ids(CartItems $model, $cart_items_id)
+{
+    $cart_items = [];
+    $status = true;
+    foreach ($cart_items_id as $cart_item_id) {
+        $cart_item = $model->get_cart_item($cart_item_id);
+        if (!$status) {
+            return [];
+        }
+        if ($cart_item['msg'] == 'success') {
+            array_push($cart_items, $cart_item['data']);
+        } else {
+            $status = false;
+        }
+    }
+    return $cart_items;
+}
+
+function remove(CartItems $model, $cart_item_id)
+{
+    $model->remove($cart_item_id);
 }

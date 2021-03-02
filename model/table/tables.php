@@ -35,7 +35,9 @@ $cart_items = "CREATE TABLE cart_items(
 )";
 $orders = "CREATE TABLE orders(
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-    cart_items_id VARCHAR(100) NOT NULL
+    user_id INT(10) UNSIGNED NOT NULL,
+    cart_items_id VARCHAR(100) NOT NULL,
+    total VARCHAR(100) DEFAULT '0.00'
 )";
 $order_items = "CREATE TABLE order_items(
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
@@ -43,7 +45,8 @@ $order_items = "CREATE TABLE order_items(
     product_id INT(10) UNSIGNED NOT NULL,
     quantity INT(10) UNSIGNED NOT NULL,
     color VARCHAR(10) NOT NULL,
-    size VARCHAR(10) NOT NULL
+    size VARCHAR(10) NOT NULL,
+    sub_total VARCHAR(100)
 )";
 $table_list = [
     "users" => $users,

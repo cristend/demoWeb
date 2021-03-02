@@ -35,20 +35,11 @@ class CartItems extends CRUD
         return return_fail();
     }
 
-    public function edit_quantity(array $array, $product_id)
+    public function edit_quantity(array $array, $id)
     {
-        $data = [];
         $data[$this->quantity] = $array["quantity"];
-        $color = $array["color"];
-        $size = $array["size"];
-        $data = clean_array($data);
-        $conditions = [
-            $this->product_id . "=?",
-            $this->color . "=?",
-            $this->size . "=?"
-        ];
-        $condition = add_and_condition("", $conditions);
-        $params = [$product_id, $color, $size];
+        $condition = $this->id . "=?";
+        $params = [$id];
         $this->update($this->table, $data, $condition, $params);
     }
 
@@ -66,16 +57,24 @@ class CartItems extends CRUD
         return return_fail();
     }
 
-    public function remove(array $array)
+    public function get_cart_item($id)
     {
-        $conditions = [
-            $this->cart_id . "=?",
-            $this->product_id . "=?",
-            $this->color . "=?",
-            $this->size . "=?"
-        ];
-        $params = [$array['cart_id'], $array['product_id'], $array['color'], $array['size']];
-        $condition = add_and_condition("", $conditions);
+        $condition = $this->id . "=?";
+        $params = [$id];
+        $cart_item = $this->read_one($this->table, "*", $condition, $params);
+        if ($cart_item) {
+            $cart_item = $this->fetch_object($this, $cart_item);
+            if ($cart_item) {
+                return return_success($cart_item);
+            }
+        }
+        return return_fail();
+    }
+
+    public function remove($id)
+    {
+        $condition = $this->id . "=?";
+        $params = [$id];
         $this->delete($this->table, $condition, $params);
     }
 

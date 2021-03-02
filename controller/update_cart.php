@@ -5,13 +5,10 @@ session_start();
 if (isset($_POST)) {
     $data = $_POST['data'];
     foreach ($data as $cart_item) {
-        $product_id = $cart_item['product_id'];
-        $quantity = $cart_item['quantity'];
+        $cart_item_id = $cart_item["cart_item_id"];
         $data = [
-            "quantity" => $quantity,
-            "color" => $cart_item["color"],
-            "size" => $cart_item["size"]
+            "quantity" => $cart_item['quantity']
         ];
-        update_quantity($cart_item_model, $data, $product_id);
+        update_quantity($cart_item_model, $data, $cart_item_id);
     }
 }

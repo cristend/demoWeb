@@ -10,6 +10,7 @@ class OrderItems extends CRUD
     protected $quantity = "quantity";
     protected $color = "color";
     protected $size = "size";
+    protected $sub_total = "sub_total";
     protected $connection;
 
     public function __construct($conn)
@@ -25,6 +26,7 @@ class OrderItems extends CRUD
         $data[$this->quantity] = $array["quantity"];
         $data[$this->color] = $array["color"];
         $data[$this->size] = $array["size"];
+        $data[$this->sub_total] = $array["sub_total"];
         $data = clean_array($data);
         $this->create_one($this->table, $data);
         $last_id = $this->get_last_order_item_id();
