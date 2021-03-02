@@ -25,7 +25,9 @@ if (isset($_GET['route'])) {
     } elseif ($route == 'cart') {
         include_once "$_SERVER[DOCUMENT_ROOT]/view/cart/cart.php";
     } elseif ($route == 'checkout') {
-        // include checkout
+        include_once "$_SERVER[DOCUMENT_ROOT]/view/checkout/checkout.php";
+    } elseif ($route == 'profile') {
+        include_once "$_SERVER[DOCUMENT_ROOT]/user/page.php";
     }
 } else {
     // default main content

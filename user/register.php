@@ -25,10 +25,20 @@
                     email: "Please enter a valid email address"
                 },
                 submitHandler: function(form) {
+                    var url = window.location.href;
+                    var url_split = url.split("?");
+                    var params = "";
+                    if (url_split.length > 1) {
+                        params = '*' + url_split[1];
+                    }
+                    data = $('form').serialize();
+                    if (params) {
+                        data = data + encodeURIComponent(params);
+                    }
                     $.ajax({
                         type: 'post',
                         url: '/controller/register.php',
-                        data: $('form').serialize(),
+                        data: data,
                         dataType: 'json',
                         success: function(response) {
                             console.log(response.location);

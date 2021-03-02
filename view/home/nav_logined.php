@@ -1,13 +1,15 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/model/user_model.php";
 include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_item_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_model.php";
 $uri = $_SERVER["REQUEST_URI"];
 $current_uri = ltrim($uri, "/");
 $login_controller = '/user/login.php';
 if (isset($_SESSION['user'])) {
     $id = $_SESSION['user'];
     $user = get_user($id, $user_model);
-    $count = get_number_item($cart_item_model);
+    $cart_id = get_cart_id($cart_model, $id);
+    $count = get_number_item($cart_item_model, $cart_id);
 }
 ?>
 
@@ -34,9 +36,9 @@ if (isset($_SESSION['user'])) {
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <li class="nav-item"><a id="user-icon" href="#"><img src="/static/images/profile.svg" /></li>
+                    <li class="nav-item"><a id="user-icon" href="/?route=profile"><img src="/static/images/profile.svg" /></li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#"><?php echo $user['name']; ?></a>
+                        <a class="nav-link" href="/?route=profile"><?php echo $user['name']; ?></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/controller/logout.php">Logout</a>

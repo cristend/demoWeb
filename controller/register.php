@@ -26,19 +26,26 @@ if (isset($_POST)) {
         "sex" => $_POST["sex"],
         "birth" => $_POST["birthday"]
     ];
+    $url = $_POST["submit"];
+    $params = explode("*", $url);
+    if (count($params) > 1) {
+        $url = "?" . $params[1];
+    } else {
+        $url = "";
+    }
 
     $register_success = register($conn, $user_data, $user_model, $cart_model);
     if ($register_success === true) {
         header('Content-Type: application/json');
         echo json_encode([
-            'location' => '/login.php',
+            'location' => '/user/login.php' . $url,
             'errors' => ""
         ]);
     } else {
         if ($register_success) {
             echo json_encode([
                 'errors' => $register_success,
-                'location' => ""
+                'location' => "/"
             ]);
         }
     }

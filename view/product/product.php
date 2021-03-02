@@ -1,6 +1,5 @@
 <?php
 include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
-
 ?>
 <div class="container">
 

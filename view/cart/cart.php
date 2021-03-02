@@ -1,29 +1,239 @@
+<?php
+session_start();
+if (isset($_GET) || !isset($_SESSION['user'])) {
+    if ($_SERVER["DOCUMENT_URI"] != "/index.php") {
+        header("Location: /404.php");
+        exit();
+    }
+}
+include_once "$_SERVER[DOCUMENT_ROOT]/model/user_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_item_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
+include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_model.php";
+
+$user_id = $_SESSION['user'];
+$user = get_user($user_id, $user_model);
+$cart_id = get_cart_id($cart_model, $id);
+$cart_items = get_cart_items($cart_item_model, $cart_id);
+// js calculation
+?>
 <link rel="stylesheet" , href="/static/css/cart.css">
 <script>
     $(function() {
-        $(".btn-minus").on("click", function() {
-            var input = $(".item-quantity > div > input[name=quantity]");
+        var products = $(".product-cart td input[checked='checked']");
+        sum_total(products);
+        $(".product-btn-minus").on("click", function() {
+            var button = event.target;
+            var index = button.name;
+            var element = ".item-quantity > div > input[name=quantity" + index + "]";
+            var input = $(element);
+            element = "#product" + index + " > .price";
+            var price = $(element)[0];
+            element = "#product" + index + " > .total";
+            var total = $(element)[0];
+            if ($.isNumeric(price.innerText)) {
+                price = parseFloat(price.innerText)
+            }
             var now = input.val();
-            if ($.isNumeric(now)) {
+            if ($.isNumeric(now) && now > 1) {
                 if (parseInt(now) - 1 > 0) {
                     now--;
                 }
                 input.val(now);
+                var total_now = (parseInt(now) * price).toFixed(2);
+                total.innerText = total_now;
             } else {
                 input.val("1");
+                total.innerText = price;
             }
+            var elements = $(".product-cart td input[checked='checked']");
+            sum_total(elements);
         });
 
-        $(".btn-plus").on("click", function() {
-            var input = $(".item-quantity > div > input[name=quantity]");
+        $(".product-btn-plus").on("click", function() {
+            var button = event.target;
+            var index = button.name;
+            var element = ".item-quantity > div > input[name=quantity" + index + "]";
+            var input = $(element);
+            element = "#product" + index + " > .price";
+            var price = $(element)[0];
+            element = "#product" + index + " > .total";
+            var total = $(element)[0];
+            if ($.isNumeric(price.innerText)) {
+                price = parseFloat(price.innerText)
+            }
             var now = input.val();
-            if ($.isNumeric(now)) {
-                input.val(parseInt(now) + 1);
+            if ($.isNumeric(now) && now >= 1) {
+                now++;
+                input.val(now);
+                var total_now = (parseInt(now) * price).toFixed(2);
+                total.innerText = total_now;
             } else {
                 input.val("1");
+                total.innerText = price;
             }
+            var elements = $(".product-cart td input[checked='checked']");
+            sum_total(elements);
+        });
+        $(".check-all").click(function() {
+            var checkedState = $(this).attr('checked');
+            if (!checkedState) {
+                checkedState = false;
+                $(this).attr("checked", "checked");
+            } else {
+                $(this).attr("checked", false);
+            }
+            $(".check-one").each(function() {
+                if (checkedState) {
+                    $(this).prop('checked', false);
+                    $(this).attr('checked', false);
+                } else {
+                    $(this).prop('checked', "checked");
+                    $(this).attr('checked', "checked");
+                }
+            });
+            var elements = $(".product-cart td input[checked='checked']");
+            sum_total(elements);
+        });
+
+        $(".check-one").click(function() {
+            var checkedState = $(this).attr('checked');
+            if (!checkedState) {
+                checkedState = false;
+                $(this).attr("checked", "checked");
+            } else {
+                $(this).attr("checked", false);
+            }
+            var elements = $(".product-cart td input[checked='checked']");
+            sum_total(elements);
+        });
+        $(".input-qty").on("change", function() {
+            var now = $(this).val();
+            var ancestor = $(this)[0].parentNode.parentNode;
+            var price = ancestor.nextElementSibling;
+            var sub_total = price.nextElementSibling;
+            if (!$.isNumeric(now) || ($.isNumeric(now) && parseInt(now) < 1)) {
+                $(this).val("1");
+                sub_total.innerText = price.innerText;
+            } else {
+                total = parseInt(now) * parseFloat(price.innerText);
+                sub_total.innerText = total.toFixed(2);
+            }
+            var elements = $(".product-cart td input[checked='checked']");
+            sum_total(elements);
+        });
+        $(".remove-product").on("click", function() {
+            var button = event.target;
+            var index = event.target.name;
+            var cart_id = $("#cart")[0].getAttribute("name");
+            var product_id = $(button).val();
+            var product = $("#product" + index);
+            var product_size = product.find(".product-size select option").val();
+            var product_color = product.find(".product-color select option").val();
+
+            $.ajax({
+                type: "POST",
+                url: "/controller/cart.php",
+                data: {
+                    'cart_id': cart_id,
+                    'product_id': product_id,
+                    'size': product_size,
+                    'color': product_color
+                },
+                success: function(response) {
+                    product.remove();
+                    var elements = $(".product-cart td input[checked='checked']");
+                    sum_total(elements);
+                },
+                error: function(xhr, ajaxOptions, thrownError) {
+                    alert(thrownError);
+                }
+            });
+        })
+        $(".update-cart").on("click", function() {
+            update_cart();
+        });
+        $(".checkout").on("click", function() {
+            update_cart();
+            // var elements = $(".product-cart td input[checked='checked']");
+            // [].forEach.call(products, function(v, i, a) {
+            //     var array = [];
+            //     product_id = $(v).find(".remove-product")[0];
+            //     quantity = $(v).find(".item-quantity div input")[0];
+            //     color = $(v).find(".product-color select option")[0];
+            //     size = $(v).find(".product-size select option")[0];
+            //     if (product_id === undefined && quantity === undefined) {
+
+            //     } else {
+            //         array.quantity = $(quantity).val();
+            //         array.product_id = $(product_id).val();
+            //         array.size = $(size).val();
+            //         array.color = $(color).val();
+            //         data[i] = {
+            //             ...array
+            //         };
+            //     }
+            // });
         });
     });
+
+    function update_cart() {
+        var cart_id = $("#cart")[0].getAttribute("name");
+        var products = $(".product-cart");
+        var quantity = 0;
+        var color = "";
+        var size = "";
+        var data = [];
+        var product_id = 0;
+        [].forEach.call(products, function(v, i, a) {
+            var array = [];
+            product_id = $(v).find(".remove-product")[0];
+            quantity = $(v).find(".item-quantity div input")[0];
+            color = $(v).find(".product-color select option")[0];
+            size = $(v).find(".product-size select option")[0];
+            if (product_id === undefined && quantity === undefined) {
+
+            } else {
+                array.quantity = $(quantity).val();
+                array.product_id = $(product_id).val();
+                array.size = $(size).val();
+                array.color = $(color).val();
+                data[i] = {
+                    ...array
+                };
+            }
+        });
+        $.ajax({
+            type: "POST",
+            url: "/controller/update_cart.php",
+            data: {
+                'cart_id': cart_id,
+                'data': data
+            },
+            success: function(response) {
+                alert("update success!")
+            }
+        });
+    }
+
+    function sum_total(elements) {
+        var total = 0;
+        [].forEach.call(elements, function(v, i, a) {
+            var node = null;
+            var ancestor = v.parentNode.parentNode;
+            for (let index = 0; index < ancestor.childNodes.length; index++) {
+                if (ancestor.childNodes[index].className == "total") {
+                    node = ancestor.childNodes[index];
+                    break;
+                }
+            }
+            if (node === null) {
+                return;
+            }
+            total = total + parseFloat(node.innerText);
+        });
+        $("#total")[0].innerText = total.toFixed(2);
+    }
 </script>
 <div class="container bootdey">
     <div class="row bootstrap snippets">
@@ -32,103 +242,96 @@
         <!-- Cart -->
         <div class="col-lg-9 col-md-9 col-sm-12">
             <div class="col-lg-12 col-sm-12">
-                <span class="title">SHOPPING CART</span>
+                <span id="cart" name="<?php echo $cart_id; ?>" class="title">SHOPPING CART</span>
             </div>
             <div class="col-lg-12 col-sm-12 hero-feature">
                 <div class="table-responsive">
                     <table class="table table-bordered tbl-cart">
                         <thead>
                             <tr>
+                                <td></td>
                                 <td class="hidden-xs">Image</td>
                                 <td>Product Name</td>
-                                <td>Size</td>
                                 <td>Color</td>
+                                <td>Size</td>
                                 <td class="td-qty">Quantity</td>
-                                <td>Unit Price</td>
+                                <td>Unit Price ($)</td>
                                 <td>Sub Total</td>
                                 <td>Remove</td>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
-                                <td class="hidden-xs">
-                                    <a href="#">
-                                        <img src="https://via.placeholder.com/200x200/" alt="Age Of Wisdom Tan Graphic Tee" title="" width="47" height="47">
-                                    </a>
-                                </td>
-                                <td><a href="#">Age Of Wisdom Tan Graphic Tee</a>
-                                </td>
-                                <td>
-                                    <select name="">
-                                        <option value="" selected="selected">S</option>
-                                        <option value="">M</option>
-                                    </select>
-                                </td>
-                                <td>-</td>
-                                <td class="item-quantity">
-                                    <div class="input-group bootstrap-touchspin">
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-minus btn-default bootstrap-touchspin-down" type="button">-</button>
-                                        </span>
-                                        <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>
-                                        <input type="text" name="quantity" value="2" class="input-qty form-control text-center" style="display: block;">
-                                        <span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span>
-                                        <span class="input-group-btn">
-                                            <button class="btn btn-plus btn-default bootstrap-touchspin-up" type="button">+</button>
-                                        </span>
-                                    </div>
-                                </td>
-                                <td class="price">$ 122.21</td>
-                                <td>$ 122.21</td>
-                                <td class="text-center">
-                                    <a href="#" class="remove_cart" rel="2">
-                                        <i class="fa fa-trash-o"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="hidden-xs">
-                                    <a href="#">
-                                        <img src="https://via.placeholder.com/200x200/" alt="Adidas Men Red Printed T-shirt" title="" width="47" height="47">
-                                    </a>
-                                </td>
-                                <td><a href="#">Adidas Men Red Printed T-shirt</a>
-                                </td>
-                                <td>
-                                    <select name="">
-                                        <option value="">S</option>
-                                        <option value="" selected="selected">M</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <select name="">
-                                        <option value="" selected="selected">Red</option>
-                                        <option value="">Blue</option>
-                                    </select>
-                                </td>
-                                <td>
-                                    <div class="input-group bootstrap-touchspin"><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-down" type="button">-</button></span><span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span><input type="text" name="" value="2" class="input-qty form-control text-center" style="display: block;"><span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span><span class="input-group-btn"><button class="btn btn-default bootstrap-touchspin-up" type="button">+</button></span></div>
-                                </td>
-                                <td class="price">$ 20.63</td>
-                                <td>$ 41.26</td>
-                                <td class="text-center">
-                                    <a href="#" class="remove_cart" rel="1">
-                                        <i class="fa fa-trash-o"></i>
-                                    </a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td colspan="6" align="right">Total</td>
-                                <td class="total" colspan="2"><b>$ 163.47</b>
-                                </td>
+                            <?php
+                            $count = 0;
+                            foreach ($cart_items as $cart_item) {
+                                $product_id = $cart_item['product_id'];
+                                $product = get_product($product_id, $product_model);
+                                $price = (floatval($product['price'])) * $cart_item['quantity'];
+                            ?>
+                                <tr id="product<?php echo $count; ?>" class="product-cart" name="<?php echo $product_id; ?>">
+                                    <td class="cart-checkbox"><input class="check-one" type="checkbox"></td>
+                                    <td class="hidden-xs">
+                                        <a href="#">
+                                            <img src="<?php echo $product['image']; ?>" alt="" title="" width="47" height="47">
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#"><?php echo $product['title']; ?></a>
+                                    </td>
+                                    <td class="product-color">
+                                        <select name="color">
+                                            <option value="<?php echo $cart_item['color']; ?>"><?php echo $cart_item['color']; ?></option>
+                                        </select>
+                                    </td>
+                                    <td class="product-size">
+                                        <select name="size">
+                                            <option value="<?php echo $cart_item['size']; ?>"><?php echo $cart_item['size']; ?></option>
+                                        </select>
+                                    </td>
+                                    <td class="item-quantity">
+                                        <div class="input-group bootstrap-touchspin">
+                                            <span class="input-group-btn">
+                                                <button name="<?php echo $count; ?>" class="btn product-btn-minus btn-default bootstrap-touchspin-down" type="button">-</button>
+                                            </span>
+                                            <span class="input-group-addon bootstrap-touchspin-prefix" style="display: none;"></span>
+                                            <input type="text" name="quantity<?php echo $count; ?>" value="<?php echo $cart_item['quantity']; ?>" class="input-qty form-control text-center" style="display: block;">
+                                            <span class="input-group-addon bootstrap-touchspin-postfix" style="display: none;"></span>
+                                            <span class="input-group-btn">
+                                                <button name="<?php echo $count; ?>" class="btn product-btn-plus btn-default bootstrap-touchspin-up" type="button">+</button>
+                                            </span>
+                                        </div>
+                                    </td>
+                                    <td class="price"><?php echo $product['price']; ?></td>
+                                    <td class="total"><?php echo $price; ?></td>
+                                    <td class="text-center">
+                                        <form name="remove-product" action="" method="get">
+                                            <button name="<?php echo $count; ?>" class="remove-product" type="button" value="<?php echo $product_id; ?>" class="close" aria-label="Close">
+                                                X
+                                            </button>
+                                        </form>
+                                    </td>
+                                </tr>
+                            <?php
+                                $count = $count + 1;
+                            }
+                            ?>
+                            <tr class="product-cart">
+                                <td class="cart-checkbox"><label><input class="check-all" type="checkbox"></label></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td>Total</td>
+                                <td id="total">0.00</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
                 <div class="btn-group btns-cart">
-                    <button type="button" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i> Continue Shopping</button>
-                    <button type="button" class="btn btn-primary">Update Cart</button>
-                    <button type="button" class="btn btn-primary">Checkout <i class="fa fa-arrow-circle-right"></i></button>
+                    <a href="/"><button type="button" class="btn btn-primary"><i class="fa fa-arrow-circle-left"></i>Continue Shopping</button></a>
+                    <button type="button" class="btn btn-primary update-cart">Update Cart</button>
+                    <a href="/?route=checkout"><button type="button" class="btn btn-primary checkout">Checkout <i class="fa fa-arrow-circle-right"></i></button></a>
                 </div>
 
             </div>

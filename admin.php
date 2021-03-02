@@ -1,7 +1,7 @@
 <?php
 include('model/table/tables.php');
-include('model/construct.php');
-include_once('model/CRUD.php');
+include('model/base/construct.php');
+include_once('model/base/CRUD.php');
 
 $crud = new CRUD($conn);
 foreach ($table_list as $table_name => $table) {

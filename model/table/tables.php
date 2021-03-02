@@ -28,12 +28,28 @@ $carts = "CREATE TABLE carts(
 $cart_items = "CREATE TABLE cart_items(
     id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     cart_id INT(10) UNSIGNED NOT NULL,
-    product_id INT(10) UNSIGNED UNIQUE NOT NULL,
-    quantity INT(10) UNSIGNED
+    product_id INT(10) UNSIGNED NOT NULL,
+    quantity INT(10) UNSIGNED,
+    color VARCHAR(10) NOT NULL,
+    size VARCHAR(10) NOT NULL
+)";
+$orders = "CREATE TABLE orders(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    cart_items_id VARCHAR(100) NOT NULL
+)";
+$order_items = "CREATE TABLE order_items(
+    id INT(10) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    order_id INT(10) UNSIGNED NOT NULL,
+    product_id INT(10) UNSIGNED NOT NULL,
+    quantity INT(10) UNSIGNED NOT NULL,
+    color VARCHAR(10) NOT NULL,
+    size VARCHAR(10) NOT NULL
 )";
 $table_list = [
     "users" => $users,
     "products" => $products,
     "carts" => $carts,
-    "cart_items" => $cart_items
+    "cart_items" => $cart_items,
+    "orders" => $orders,
+    "order_items" => $order_items
 ];

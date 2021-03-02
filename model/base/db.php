@@ -10,7 +10,7 @@ class Model
         if ($this->connection->connect_error) {
             die("Connection failed: " . $this->connection->connect_error);
         };
-        // mysqli_report(MYSQLI_REPORT_ALL);
+        mysqli_report(MYSQLI_REPORT_ALL);
         $this->connection->autocommit(false);
     }
 

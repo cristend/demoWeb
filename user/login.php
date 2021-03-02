@@ -36,7 +36,7 @@ if (isset($_SESSION['user'])) {
                         params = '*' + url_split[1];
                     }
                     data = $('form').serialize();
-                    if (params){
+                    if (params) {
                         data = data + encodeURIComponent(params);
                     }
                     $.ajax({

@@ -206,6 +206,7 @@ class CRUD
             try {
                 $stmt->execute();
             } catch (\Throwable $th) {
+                
                 $this->connection->rollback();
                 logError($th . "\n" . $query);
             }

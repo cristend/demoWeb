@@ -38,7 +38,7 @@
         $('form[name=cart]').bind('submit', function() {
             $.ajax({
                 type: 'post',
-                url: '/controller/cart.php',
+                url: '/controller/add_cart.php',
                 data: $('form').serialize(),
                 dataType: 'json',
                 success: function(response) {
