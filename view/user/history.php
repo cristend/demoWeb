@@ -1,12 +1,11 @@
 <?php
-include_once "$_SERVER[DOCUMENT_ROOT]/model/order_model.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/order_item_model.php";
-include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_item_model.php";
-
-$user_id = $_SESSION["user"];
-$orders = find_orders($order_model, $user_id);
-
+if (isset($_SESSION["user"])) {
+    include_once "$_SERVER[DOCUMENT_ROOT]/model/order_model.php";
+    include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
+    include_once "$_SERVER[DOCUMENT_ROOT]/model/order_item_model.php";
+    include_once "$_SERVER[DOCUMENT_ROOT]/model/cart_item_model.php";
+    $user_id = $_SESSION["user"];
+    $orders = find_orders($order_model, $user_id);
 ?>
     <div class="col-md-9">
         <?php
@@ -77,4 +76,8 @@ $orders = find_orders($order_model, $user_id);
         }
         ?>
     </div>
-</div>
+    </div>
+<?php
+} else {
+    header("Location: /404.php");
+}

@@ -13,6 +13,16 @@ function get_user($id, Users $model)
     }
     return "";
 }
+
+function edit_user($user_id, Users $model, array $array)
+{
+    $data = $model->construct_user();
+    foreach ($array as $key => $value) {
+        $data[$key] = $value;
+    }
+    $model->edit($user_id, $data);
+}
+
 function add_user($data, Users $model)
 {
     $user_status = $model->add($data);

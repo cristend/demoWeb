@@ -131,8 +131,7 @@ class Users extends CRUD
             "phone" => "",
             "pass" => "",
             "birth" => "",
-            "address" => "",
-            "cart_id" => ""
+            "address" => ""
         ];
     }
 }
