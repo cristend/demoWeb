@@ -67,6 +67,7 @@
 include_once "$_SERVER[DOCUMENT_ROOT]/model/product_model.php";
 if (isset($_GET)) {
     $id = $_GET['id'];
+    $uri = $_SERVER["REQUEST_URI"];
     $product_detail = get_product($id, $product_model);
     if ($product_detail) {
 ?>

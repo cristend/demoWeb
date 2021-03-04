@@ -1,4 +1,8 @@
 <?php
+if(!isset($_SESSION["user"])){
+    header("Location: /user/login.php");
+    exit;
+}
 if (isset($_GET) || !isset($_SESSION['user'])) {
     if ($_SERVER["DOCUMENT_URI"] != "/index.php") {
         header("Location: /404.php");

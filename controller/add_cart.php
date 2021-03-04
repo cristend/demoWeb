@@ -6,7 +6,7 @@ if (!isset($_SESSION['user'])) {
     $url = ltrim($_POST['url'], "/");
     header('Content-Type: application/json');
     echo json_encode([
-        'location' => '/login.php' . $url
+        'location' => '/user/login.php' . $url
     ]);
 } else {
     $uri = $_POST['url'];
